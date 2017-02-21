@@ -42,3 +42,6 @@ $ npm run dev
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
+
+
+https://github.com/noprotocol/np-vue/commit/8cff712d78e824dbeae0758a0c3f7e9db42d3f63

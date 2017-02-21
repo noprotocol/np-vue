@@ -4,10 +4,19 @@ import Hello from 'components/Hello'
 
 Vue.use(Router)
 
-export default new Router({
+const router new Router({
     routes: [{
         path: '/',
         name: 'Hello',
         component: Hello
     }]
 })
+
+router.beforeEach((route, redirect, next) => {
+    next()
+})
+
+router.afterEach((to, from) => {
+})
+
+export default router

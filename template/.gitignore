@@ -1,6 +1,6 @@
 .DS_Store
 node_modules/
-dist/
+# public/ // TODO: Only ignore assets and index.html?
 npm-debug.log
 test/unit/coverage
 test/e2e/reports

@@ -5,6 +5,7 @@ if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
+const chalk = require('chalk')
 var opn = require('opn')
 var path = require('path')
 var express = require('express')
@@ -67,7 +68,9 @@ app.use(staticPath, express.static('./static'))
 var uri = 'http://localhost:' + port
 
 devMiddleware.waitUntilValid(function () {
-    console.log('> Listening at ' + uri + '\n')
+    const emojis = ['🙉','🙊','🙈','✌️','✌️','💃','😘','😊','😱','😽','😸','🍻']
+    const emoji = emojis[Math.floor(Math.random() * emojis.length)]
+    console.log(`> Listening at ${chalk.green(uri)} ${emoji}\n`)
 })
 
 module.exports = app.listen(port, function (err) {

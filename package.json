@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vue-cli": "^2.8.1"
+  },
+  "dependencies": {
+    "promise-polyfill": "^6.0.2"
   }
 }

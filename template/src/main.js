@@ -1,3 +1,8 @@
+// Polyfills
+import 'core-js/fn/array/find'
+import Promise from 'promise-polyfill'
+window.Promise = window.Promise || Promise
+
 import Vue from 'vue'
 import App from './App'
 import router from './router'

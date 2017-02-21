@@ -32,7 +32,11 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
-    log: () => {}
+    log: () => {
+        const emojis = ['🙉','🙊','🙈','✌️','✌️','💃','😘','😊','😱','😽','😸','🍻']
+        const emoji = emojis[Math.floor(Math.random() * emojis.length)]
+        console.log(`> NP Vue - ${emoji}\n`)
+    }
 })
 // force page reload when html-webpack-plugin template changes
 compiler.plugin('compilation', function (compilation) {

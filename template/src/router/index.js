@@ -4,7 +4,7 @@ import Hello from 'components/Hello'
 
 Vue.use(Router)
 
-const router new Router({
+const router = new Router({
     routes: [{
         path: '/',
         name: 'Hello',

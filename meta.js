@@ -24,6 +24,10 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
+    "stage2": {
+      "type": "confirm",
+      "message": "Use Stage 2 Babel preset? [preset-stage-2]"
+    }
   },
   "filters": {
     ".eslintrc.js": true,

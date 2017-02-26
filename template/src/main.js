@@ -5,6 +5,8 @@ window.Promise = window.Promise || Promise
 
 import Vue from 'vue'
 
+Vue.devtool.productionTip = false
+
 // Services
 import { sync } from 'vuex-router-sync'
 import router from './router'

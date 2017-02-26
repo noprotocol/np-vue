@@ -8,4 +8,14 @@ describe('Hello.vue', () => {
         expect(vm.$el.querySelector('.hello h1').textContent)
         .toBe('Hello world :)')
     })
+    it('renders to a nice snapshot', () => {
+        const renderer = require('vue-server-renderer').createRenderer()
+        const vm = new Vue({
+            el: document.createElement('div'),
+            render: h => h(Hello),
+        })
+        renderer.renderToString(vm, (err, str) => {
+            expect(str).toMatchSnapshot()
+        })
+    })
 })

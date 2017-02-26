@@ -5,6 +5,10 @@ import Hello from 'components/Hello'
 Vue.use(Router)
 
 const router = new Router({
+    mode: 'history',
+    base: __dirname,
+    transitionOnLoad: true,
+    linkActiveClass: 'active',
     routes: [{
         path: '/',
         name: 'Hello',

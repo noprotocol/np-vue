@@ -9,8 +9,21 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "npm test unit && npm run e2e",
+    "test": "jest --watch",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "src/components/([^\\.]*)$": "<rootDir>/src/components/$1.vue",
+      "^vue$": "vue/dist/vue.common.js",
+      "src/([^\\.]*)$": "<rootDir>/src/$1.vue",
+      "(.*)/(.*)$": "$1/$2.vue"
+    },
+    "transform": {
+      ".*\\.vue$": "<rootDir>/jest/jest-vue.js",
+      ".*": "babel-jest"
+    }
   },
   "dependencies": {
     "vue": "^2.1.10",
@@ -18,6 +31,8 @@
     "vuex": "^2.1.2"
   },
   "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "jest": "^19.0.2",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",

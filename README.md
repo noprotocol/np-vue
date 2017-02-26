@@ -43,5 +43,10 @@ $ npm run dev
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
 
+TODO:
+
+- Meta plugin
+- Documentation
+- Pre-render vs SSR
 
 https://github.com/noprotocol/np-vue/commit/8cff712d78e824dbeae0758a0c3f7e9db42d3f63

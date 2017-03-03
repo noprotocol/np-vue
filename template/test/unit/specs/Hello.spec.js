@@ -12,9 +12,9 @@ describe('Hello.vue', () => {
         const renderer = require('vue-server-renderer').createRenderer()
         const vm = new Vue({
             el: document.createElement('div'),
-            render: h => h(Hello),
+            render: h => h(Hello)
         })
-        renderer.renderToString(vm, (err, str) => {
+        renderer.renderToString(vm, (_, str) => {
             expect(str).toMatchSnapshot()
         })
     })

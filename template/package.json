@@ -9,10 +9,12 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "jest": {
+    "testMatch": ["**/test/unit/**/*.spec.js"],
     "moduleNameMapper": {
       "src/components/([^\\.]*)$": "<rootDir>/src/components/$1.vue",
       "^vue$": "vue/dist/vue.common.js",
@@ -50,9 +52,8 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.14.1",
     "eslint-config-standard": "^6.2.1",
-    "eslint-config-vue": "^2.0.1",
-    "eslint-friendly-formatter": "^2.0.7",
     "eslint-config-vue": "^2.0.2",
+    "eslint-friendly-formatter": "^2.0.7",
     "eslint-plugin-vue": "^2.0.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^2.0.0",

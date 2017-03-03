@@ -1,5 +1,6 @@
 set -e
 
+rm -rf generated-project
 yes "" | ./node_modules/.bin/vue init . generated-project
 
 cd generated-project
@@ -9,6 +10,5 @@ if [ -f $yarnbin ]; then
 else
     npm install
 fi
-npm run lint
 npm test
 npm run build

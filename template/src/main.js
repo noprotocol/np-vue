@@ -1,8 +1,5 @@
 // Polyfills
-import 'core-js/fn/array/find'
-import Promise from 'promise-polyfill'
-window.Promise = window.Promise || Promise
-
+import 'babel-polyfill'
 import Vue from 'vue'
 
 Vue.config.productionTip = false

@@ -1,4 +1,6 @@
-# vue-webpack-boilerplate
+[![Build Status](https://img.shields.io/travis/noprotocol/np-vue/master.svg)](https://travis-ci.org/noprotocol/np-vue)
+
+# NP-Vue
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 

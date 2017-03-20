@@ -11,4 +11,6 @@ else
     npm install
 fi
 npm test
+test_result=$?
 npm run build
+exit $test_result

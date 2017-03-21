@@ -1,6 +1,8 @@
 set -e
 
-rm -rf generated-project
+if [ -z $UPDATE_ONLY]; then
+    rm -rf generated-project
+fi
 yes "" | ./node_modules/.bin/vue init . generated-project
 
 cd generated-project

@@ -33,7 +33,7 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
     log: () => {
-        const emojis = ['🙉','🙊','🙈','✌️','✌️','💃','😘','😊','😱','😽','😸','🍻']
+        const emojis = ['🙉', '🙊', '🙈', '✌️', '✌️', '💃', '😘', '😊', '😱', '😽', '😸', '🍻']
         const emoji = emojis[Math.floor(Math.random() * emojis.length)]
         console.log(`> NP Vue - ${emoji}\n`)
     }
@@ -72,7 +72,7 @@ app.use(staticPath, express.static('./static'))
 var uri = 'http://localhost:' + port
 
 devMiddleware.waitUntilValid(function () {
-    const emojis = ['🙉','🙊','🙈','✌️','✌️','💃','😘','😊','😱','😽','😸','🍻']
+    const emojis = ['🙉', '🙊', '🙈', '✌️', '✌️', '💃', '😘', '😊', '😱', '😽', '😸', '🍻']
     const emoji = emojis[Math.floor(Math.random() * emojis.length)]
     console.log(`> Listening at ${chalk.green(uri)} ${emoji}\n`)
 })

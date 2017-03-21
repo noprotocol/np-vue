@@ -15,8 +15,8 @@ module.exports = {
         path: config.build.assetsRoot,
         filename: '[name].js',
         publicPath: process.env.NODE_ENV === 'production'
-        ? config.build.assetsPublicPath
-        : config.dev.assetsPublicPath
+            ? config.build.assetsPublicPath
+            : config.dev.assetsPublicPath
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -32,11 +32,10 @@ module.exports = {
         }
     },
     module: {
-        rules: [
-        {
+        rules: [{
             test: /\.(js|vue)$/,
             loader: 'eslint-loader',
-            enforce: "pre",
+            enforce: 'pre',
             include: [resolve('src'), resolve('test')],
             options: {
                 formatter: require('eslint-friendly-formatter')
@@ -67,7 +66,6 @@ module.exports = {
                 limit: 10000,
                 name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
             }
-        }
-        ]
+        }]
     }
 }

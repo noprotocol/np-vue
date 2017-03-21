@@ -10,7 +10,7 @@
     "test": "npm run lint && jest && node test/e2e/runner.js",
     "test:unit": "jest --watch",
     "test:e2e": "node test/e2e/runner.js",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs build config"
   },
   "jest": {
     "testMatch": ["**/test/unit/**/*.spec.js"],
@@ -53,6 +53,7 @@
     "eslint-config-vue": "^2.0.2",
     "eslint-friendly-formatter": "^2.0.7",
     "eslint-plugin-vue": "^2.0.1",
+    "eventsource-polyfill": "^0.9.6",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.0",

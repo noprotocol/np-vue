@@ -17,7 +17,6 @@ import App from './App'
 // Event.$on('EXAMPLE, () => {})
 window.Event = new Vue()
 
-/* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,

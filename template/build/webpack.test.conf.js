@@ -12,7 +12,7 @@ var webpackConfig = merge(baseConfig, {
     },
     devtool: '#inline-source-map',
     resolveLoader: {
-    alias: {
+        alias: {
             'scss-loader': 'sass-loader'
         }
     },
